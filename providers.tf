@@ -1,10 +1,10 @@
 terraform {
-  required_version = "~> 1.0.2"
+  required_version = "~> YOURTERRAFORMVERSION"
 
   required_providers {
     azurerm = {
       source  = "registry.terraform.io/hashicorp/azurerm"
-      version = "2.68.0"
+      version = "VERSION"
     }
   }
 
@@ -12,7 +12,7 @@ terraform {
   #   use_azuread_auth     = true
   #   storage_account_name = "YOURSTORAGEACCOUNT"
   #   container_name       = "YOURCONTAINERNAME"
-  #   key                  = "terraform.tfstate"
+  #   key                  = "intro.tfstate"
   # }
 
 }
