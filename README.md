@@ -133,7 +133,7 @@ We're almost ready to deploy some resources in Azure, but first, you'll need to 
    - Other variables are required input - they can either be defined as an environment variable `TF_VAR_<var name>`, defined in a "tfvars" file, or manually entered at plan/apply/destroy time when prompted by the Terraform CLI
 1. Open `terraform.tfvars` in the editor - we'll use this file to define our variable values.
 1. Set `prefix = "YOURPREFIXNAME"` to your first initial and lastname, e.g. `dbenedic`
-1. Open the [Azure Portal](https://portal.azure.com) and find the name of your unique "spoke" resource group. For example, my spoke resource group is named `dmw-lab-062521-dben-spoke`.
+1. Open the [Azure Portal](https://portal.azure.com) and find the name of your unique resource group. For example, my resource group is named `lab-062521-dben`.
 1. Copy the resource group name and paste it into the `terraform.tfvars` file value for `resource_group_name`. Your tfvars file should look something like this (your strings will vary):
 ```
 prefix = "dbenedic"
