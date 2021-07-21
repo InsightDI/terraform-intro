@@ -4,7 +4,7 @@
 
 1. You should have received a user ID and password for the lab environment.  You will use those credentials to log into an Azure tenant where you can complete the labs.
 
-# Lab 1: Hashicorp Terraform
+# Lab: Hashicorp Terraform Intro
 
 ## Prerequisites
 1. All lab instructions are to be completed in the Azure Cloud Shell unless otherwise noted
@@ -111,18 +111,19 @@ Any time you make changes to the `terraform {}` block, you will need to initiali
 ```
 terraform init
 ```
-2. From the code editor, refresh the FILES window.
+2. Notice how you didn't pass any flags into the command to tell it where to find your Terraform configuration files? That's because Terraform CLI reads through the directory from where it is executed and loads in all of the files ending in "[.tf](https://www.terraform.io/docs/language/files/index.html#file-extension)" automatically. Neat!
+3. From the code editor, refresh the FILES window.
 
 ![Refresh editor](/.images/cloud-shell-refresh-editor.png)
 
-3. You should now see the following additional files or directories:
+4. You should now see the following additional files or directories:
 ```
 .terraform/
 .terraform.lock.hcl
 ```
-4. Expand the `.terraform/` directory tree as far as it will let you. This directory is where Terraform stores all provider information.
+5. Expand the `.terraform/` directory tree as far as it will let you. This directory is where Terraform stores all provider information.
    - This directory should not be checked into source code
-5. Open the `.terraform.lock.hcl` file.
+6. Open the `.terraform.lock.hcl` file.
    - This file contains version information for all providers references in the Terraform configuration, including hashes used to calculate the provider configuration in order to provide consistency from one run to the next.
    - This file should be checked into source code
 
@@ -220,7 +221,7 @@ terraform apply -auto-approve
    - Bonus points if you can figure out how we're preventing state from getting checked into the `terraform-intro` repo...
 
 ## Cleanup
-Alas, all good things must come to an end. Time to destroy some stuff! After all, [rapid elasticity](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) is one of the reasons why we use the cloud, right?
+Alas, all good things must come to an end. Time to destroy some stuff! After all, [rapid elasticity](https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf) is one of the reasons why we use the cloud, right? BURN IT DOWN!
 1. From Cloud Shell, within the `terraform-intro` directory, run the following to tear down our deployment:
 ```
 terraform destroy
